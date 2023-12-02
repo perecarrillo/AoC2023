@@ -2,3 +2,4 @@
 Each day with a different language
 
 1. Perl
+2. Bash
