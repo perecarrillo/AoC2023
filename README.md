@@ -2,7 +2,8 @@
 
 Each day with a different language
 
-1. Perl
-2. Bash
-3. Swift
-4. Crystal
+1. Perl 😡
+2. Bash 😐
+3. Swift 😐
+4. Crystal 🙂
+5. Ruby 😃
