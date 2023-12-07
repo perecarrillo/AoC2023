@@ -6,5 +6,6 @@ Each day with a different language
 2. Bash 😐
 3. Swift 😐
 4. Crystal 🙂
-5. Ruby 😃
-6. Objective-C 😡
+5. Ruby 😍
+6. Objective-C 💩
+7. Wren 😍
