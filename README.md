@@ -9,3 +9,4 @@ Each day with a different language
 5. Ruby 😍
 6. Objective-C 💩
 7. Wren 😍
+8. Julia 😃
