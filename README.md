@@ -11,3 +11,4 @@ Each day with a different language
 7. Wren 😍
 8. Julia 😃
 9. Scala 😃
+10. Raku 😐
