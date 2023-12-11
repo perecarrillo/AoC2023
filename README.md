@@ -12,3 +12,4 @@ Each day with a different language
 8. Julia 😃
 9. Scala 😃
 10. Raku 😐
+11. F# 💩
