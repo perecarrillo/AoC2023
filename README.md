@@ -13,3 +13,5 @@ Each day with a different language
 9. Scala 😃
 10. Raku 😐
 11. F# 💩
+12. C++ 😍
+13. Matlab 😡
