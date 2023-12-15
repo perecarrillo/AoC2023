@@ -15,3 +15,4 @@ Each day with a different language
 11. F# 💩
 12. C++ 😍
 13. Matlab 😡
+14. D 😃
