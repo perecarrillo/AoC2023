@@ -18,3 +18,4 @@ Each day with a different language
 14. D 😃
 15. Haskell 😍
 16. C 😐
+17. Java 😃
