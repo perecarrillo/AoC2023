@@ -5,10 +5,12 @@ fn main() {
     // let mut map = [[0; MAP_SIZE]; MAP_SIZE]; // Part One
     // let mut x : usize = 500; // Part One
     // let mut y : usize = 500; // Part One
-    let mut area = 0;
+    let mut area = 1;
     
-    let mut x : i128 = 1000000000; // Part Two
-    let mut y : i128 = 1000000000;
+    let mut x : i128 = 10; // Part Two
+    let mut y : i128 = 10;
+    
+    let mut edges = 0;
     
     while line != "DONE\n" {
         // println!("{}", line);
@@ -20,27 +22,29 @@ fn main() {
         let dir = string.chars().nth(7).unwrap();
         let s : String = string.chars().skip(2).take(5).collect();
         let len : i128 = i128::from_str_radix(s.as_str(), 16).unwrap();
+        // let dir = it.next().unwrap(); // Part One
+        // let len : i128 = it.next().unwrap().parse::<i128>().unwrap(); // Part One
+        
+        edges += len;
         
         if dir == '0' {
-            area += y*len;
+            area += x*len;
             y = y + len;
         }
         else if dir == '1' {
-            x = x + len;
+            x = x - len;
         }
         else if dir == '2' {
-            area -= y*len;
+            area -= x*len;
             y = y - len;
         }
         else if dir == '3' {
-            x = x - len;
+            x = x + len;
         }
         
-        println!("New Area: {}", area);
+        // println!("{}, {}", dir, len);
+        // println!("x: {}, y:{}, Local Area: {}, New Area: {}", x, y, localArea, area);
         
-        // let dir = it.next().unwrap(); // Part One
-        // let len : i32 = it.next().unwrap().parse::<i32>().unwrap(); // Part One
-        println!("{}, {}", dir, len);
         /*for _ in 0..len { // Part One
             map[x][y] = 1;
             if dir == "R" {
@@ -62,6 +66,7 @@ fn main() {
         line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
     }
+    area += edges/2;
     /*println!("{}, {}", x, y); // Part One
     // println!("{:?}", map);
     
