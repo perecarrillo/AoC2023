@@ -10,8 +10,6 @@ fn main() {
     let mut x : i128 = 10; // Part Two
     let mut y : i128 = 10;
     
-    let mut edges = 0;
-    
     while line != "DONE\n" {
         // println!("{}", line);
         
@@ -25,8 +23,6 @@ fn main() {
         // let dir = it.next().unwrap(); // Part One
         // let len : i128 = it.next().unwrap().parse::<i128>().unwrap(); // Part One
         
-        edges += len;
-        
         if dir == '0' {
             area += x*len;
             y = y + len;
@@ -35,11 +31,12 @@ fn main() {
             x = x - len;
         }
         else if dir == '2' {
-            area -= x*len;
+            area -= (x-1)*len;
             y = y - len;
         }
         else if dir == '3' {
             x = x + len;
+            area += len;
         }
         
         // println!("{}, {}", dir, len);
@@ -66,7 +63,6 @@ fn main() {
         line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
     }
-    area += edges/2;
     /*println!("{}, {}", x, y); // Part One
     // println!("{:?}", map);
     
