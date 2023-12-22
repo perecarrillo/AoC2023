@@ -42,8 +42,8 @@ void main(){
     
     // map.forEach((l) => print(l.join()));
     
-    /*x = 130 + 65;
-    y = 130 + 65;
+    /*x = 131*1 + 65;
+    y = 131*1 + 65;
 
 
 
@@ -59,12 +59,12 @@ void main(){
         }
     }*/
     
-    x = 65;
-    y = 65;
+    x = 0;
+    y = 130;
 
     map[x][y] = 'O';
 
-    for (var i = 0; i < 65; ++i) {
+    for (var i = 0; i < 65 + 131*1; ++i) { // 65 + 131*4
         if (i%10000 == 0) print(i);
         map = step(map);
     }
@@ -74,15 +74,31 @@ void main(){
     var sum = map.fold<int>(0, (sum, elem) => sum + elem.fold<int>(0, (lineSum, ch) => lineSum + (ch == 'O' ? 1 : 0)));
     print('Part one result: $sum');
 
-    // var full = 7320;
-    var full = 7335;
+    var fulli = 7320;
+    var fullp = 7335;
     var allFromMid = 5506 + 5522 + 5518 + 5534;
-    var n = 1; //(26501365 - 65) / 131 - 1; // 202300
-    var tl = 971;
-    var tr = 959;
-    var bl = 975;
-    var br = 959;
+    var n = 4; //(26501365 - 65) / 131 - 1; // 202300
+    // var tl = 971;
+    // var tr = 959;
+    // var bl = 975;
+    // var br = 959;
 
-    var sumaFinal = full + allFromMid + 4*(n*(n-1)/2) * full + (n-1)*(6427 + 6427 + 6415 + 6411) + n*(tl + tr + bl + br);
+    var tl = 931;
+    var tr = 937;
+    var bl = 935;
+    var br = 932;
+
+    var par = 0;
+    var impar = 0;
+    for (var i = 1; i < 202300; ++i) {
+        if (i % 2 == 0) {
+            impar += i;
+        } else {
+            par += i;
+        }
+    }
+
+    // var sumaFinal = fulli + allFromMid + 4*((n-1)*(n-2)/2) * (fulli + fullp)/2 + (n-1)*(6427 + 6427 + 6415 + 6411) + n*(tl + tr + bl + br);
+    var sumaFinal = fulli + 4*(par*fullp + impar*fulli) + n*(tl + tr + bl + br) + (n-1)*(6427 + 6427 + 6415 + 6411) + allFromMid;
     print('Part two result: $sumaFinal');
 }
