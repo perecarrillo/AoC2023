@@ -22,3 +22,5 @@ Each day with a different language
 18. Rust 😐
 19. Kotlin 😍
 20. Go 😐
+21. Dart 😍
+22. Vala 😃
