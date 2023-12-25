@@ -1,0 +1,32 @@
+<html>
+
+<body>
+
+    <h1> AoC day 24 </h1>
+
+    <p>Upload Input:</p>
+    <input type="file" name="readfile" id="readfile" />
+
+    <p id="result1"></p>
+    <p id="result2"></p>
+
+    <script src="24.js"></script>
+
+    <script type="text/javascript">
+
+        let file = document.getElementById("readfile");
+
+        file.addEventListener("change", function () {
+            var reader = new FileReader();
+            reader.onload = function (progressEvent) {
+                result1.innerHTML = "Part one result: " + computeIntersections(this.result.split(/\r\n|\n/)).toString();
+                result2.innerHTML = "Part two result: " + getSumInitialPosition(this.result.split(/\r\n|\n/)).toString();
+            };
+            reader.readAsText(this.files[0]);
+        });
+    </script>
+
+
+</body>
+
+</html>

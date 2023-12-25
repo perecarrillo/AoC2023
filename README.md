@@ -25,3 +25,5 @@ Each day with a different language
 21. Dart 😍
 22. Vala 😃
 23. C# 😃
+24. JavaScript (+ HTML) 😃 + Maple 😃
+25. Python 😍
